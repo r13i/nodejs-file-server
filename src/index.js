@@ -1,6 +1,6 @@
 const { createServer } = require('http');
+const { methods } = require('./methods');
 
-const methods = Object.create(null);
 const port = process.env.PORT || 8000;
 
 createServer((request, response) => {
