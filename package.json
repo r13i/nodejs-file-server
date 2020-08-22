@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-file-server",
+  "version": "1.0.0",
+  "description": "Trying myself to low-level Node.js programming with this LDAP-equivalent (Lightweight Directory Access Protocol).",
+  "main": "index.js",
+  "dependencies": {
+    "mime": "^2.4.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redouane-dev/nodejs-file-server.git"
+  },
+  "keywords": [
+    "Node.js",
+    "filesystem"
+  ],
+  "author": "Redouane Achouri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redouane-dev/nodejs-file-server/issues"
+  },
+  "homepage": "https://github.com/redouane-dev/nodejs-file-server#readme"
+}
