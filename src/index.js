@@ -1,5 +1,5 @@
-const { createServer } = require('http');
-const { methods } = require('./methods');
+const { createServer } = require("http");
+const { methods } = require("./methods");
 
 const port = process.env.PORT || 8000;
 
@@ -10,7 +10,7 @@ createServer((request, response) => {
             if (error.status != null) return error
             else return { body: String(error), status: 500 };
         })
-        .then(({ body, status = 200, type = 'text/plain'}) => {
+        .then(({ body, status = 200, type = "text/plain"}) => {
             response.writeHead(status, { "Content-Type": type });
             if (body && body.pipe) body.pipe(response);
             else response.end(body);

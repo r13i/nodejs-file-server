@@ -3,7 +3,7 @@ const { resolve, join, sep } = require('path');
 
 const baseDirectory = process.cwd();
 
-exports.urlPath = function (url) {
+exports.urlPath = (url) => {
     let { pathname } = parse(url);
     let path = resolve(decodeURIComponent(pathname).slice(1));
 
@@ -13,7 +13,7 @@ exports.urlPath = function (url) {
     return path;
 }
 
-exports.pipeStream = function (from, to) {
+exports.pipeStream = (from, to) => {
     return new Promise ((resolve, reject) => {
         from.on('error', reject);
         to.on('error', reject);
@@ -22,6 +22,6 @@ exports.pipeStream = function (from, to) {
     });
 }
 
-exports.getListItem = function (request, file) {
+exports.getListItem = (request, file) => {
     return `<li><a href="${join(parse(request.url).pathname, file)}">${file}</a></li>`;
 }
